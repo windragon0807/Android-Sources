@@ -62,9 +62,10 @@ class LogUtil {
         private fun buildLogMsg(tag: String, message: String): String {
             val stackTrace = Thread.currentThread().stackTrace[4]
             mStringBuffer.setLength(0)
-            mStringBuffer.append("[ $tag ]")
-            mStringBuffer.append(" [ line ${stackTrace.lineNumber} ]")
-            mStringBuffer.append(" : $message")
+            mStringBuffer.append("[ $tag ] ")
+            mStringBuffer.append("[ ${stackTrace.methodName}() ] ")
+            mStringBuffer.append("[ line ${stackTrace.lineNumber} ] ")
+            mStringBuffer.append(": $message")
             return mStringBuffer.toString()
         }
     }
