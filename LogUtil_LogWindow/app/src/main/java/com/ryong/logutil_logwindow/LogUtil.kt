@@ -8,7 +8,7 @@ import kotlinx.coroutines.launch
 
 class LogUtil {
     companion object {
-        private val TAG = this.javaClass.simpleName
+        private const val TAG = "ClassName"
 
         var job: Job? = null
 
@@ -23,7 +23,7 @@ class LogUtil {
 
         fun i(tag: String, msg: String) {
             val message = buildLogMsg(tag, msg)
-            Log.v(TAG, message)
+            Log.i(TAG, message)
             job?.cancel()
             job = CoroutineScope(Dispatchers.Main).launch {
                 MainActivity.getInstance()?.writeWindow(message)
@@ -33,7 +33,7 @@ class LogUtil {
 
         fun d(tag: String, msg: String) {
             val message = buildLogMsg(tag, msg)
-            Log.v(TAG, message)
+            Log.d(TAG, message)
             job?.cancel()
             job = CoroutineScope(Dispatchers.Main).launch {
                 MainActivity.getInstance()?.writeWindow(message)
@@ -42,7 +42,7 @@ class LogUtil {
 
         fun w(tag: String, msg: String) {
             val message = buildLogMsg(tag, msg)
-            Log.v(TAG, message)
+            Log.w(TAG, message)
             job?.cancel()
             job = CoroutineScope(Dispatchers.Main).launch {
                 MainActivity.getInstance()?.writeWindow(message)
@@ -51,7 +51,7 @@ class LogUtil {
 
         fun e(tag: String, msg: String) {
             val message = buildLogMsg(tag, msg)
-            Log.v(TAG, message)
+            Log.e(TAG, message)
             job?.cancel()
             job = CoroutineScope(Dispatchers.Main).launch {
                 MainActivity.getInstance()?.writeWindow(message)
