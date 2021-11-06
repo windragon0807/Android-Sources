@@ -14,10 +14,10 @@
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:background="@drawable/bg_layout_round_aablack"
-        android:visibility="gone"
+        android:visibility="invisible"
         android:layout_marginTop="30dp"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" >
 
         <androidx.constraintlayout.widget.ConstraintLayout

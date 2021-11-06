@@ -1,4 +1,4 @@
-package com.ryong.logutil_logwindow
+package com.ryong.logwindow
 
 import org.junit.Test
 
