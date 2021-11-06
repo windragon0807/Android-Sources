@@ -111,7 +111,10 @@ class MainActivity : AppCompatActivity() {
         when (zoomState) {
             false -> {
                 LogUtil.i(TAG, "Animation Open")
-                logWindow.visibility = View.VISIBLE
+                with (logWindow) {
+                    visibility = View.VISIBLE
+                    bringToFront()
+                }
                 currentAnimator = AnimatorSet().apply {
                     play(ObjectAnimator.ofFloat(logWindow, View.X, button.x, logWindowX)).apply {  // X 시작 위치, 마지막 위치
                         with(ObjectAnimator.ofFloat(logWindow, View.Y, button.y, logWindowY))  // Y 시작 위치, 마지막 위치
