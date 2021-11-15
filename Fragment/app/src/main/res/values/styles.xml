@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="picker" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:textColorPrimary">#4983B1</item>
+<!--        <item name="android:textColorSecondary">#CAC16F</item>-->
+        <item name="android:textColorHighlight">#4983B1</item>
+        <item name="android:colorControlNormal">#4983B1</item> <!-- divider color -->
+        <item name="android:flipInterval">10</item>
+    </style>
+</resources>
+
